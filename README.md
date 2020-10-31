@@ -11,8 +11,10 @@ Workflow:
 *Note : this code achieved the direction from DNA Server to the APP, does NOT contain the flow above yet.
 
 How to use:
-* This is waiting for weijian's update*
-
+1. Run the dnac-device-detail.py and dnac-device-info.py to get the device detail info by APIs.
+2. Run the eye_server.py to build a web server based on flask.
+3. Using Android Studio compile the appmcv to get apk.
+4. Run the apk on an Android device or smart glasses to get the device inforatmion on realtime when you look at a AP or switch.
 
 
 
