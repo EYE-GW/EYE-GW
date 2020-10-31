@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ 
+<head>
+    <title>VUE解析JSON数据</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./static/js/vue.min.js"></script>
+    <script src="./static/js/jquery.min.js"></script>
+</head>
+<body>
+		<div id="test">
+		
+		</div>
+
+</body>
+<script type="text/javascript">
+		window.onload=function(){
+				//js代码请求
+			}
+			$(function(){
+			    $.ajax({
+					method:"post",
+					url:"http://127.0.0.1:5000/static/json/id.json",/*这里要写nginx访问的全路径*/
+					data:{},
+					dataType: "json",
+					success: function(data){
+					  var str="<ul>";    
+					  $.each(data,function(i,items){     
+						  str+="<li>"+"ID："+items.id+"</li>";
+						  str+="<li>"+"姓名："+items.name+"</li>"; 
+						 });                 
+						 str+="</ul>";      
+						 $("div").append(str); 
+					}
+					
+				});
+ 
+			})
+</script>
+ 
+</html>

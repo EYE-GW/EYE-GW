@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+https://blog.csdn.net/superxiaolong123/article/details/81873882
+-->
+<html lang="zh-CN">
+ 
+<head>
+    <title>EYE-GW</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./static/js/vue.min.js"></script>
+    <script src="./static/js/jquery.min.js"></script>
+
+<style type="text/css">
+*{margin:0;padding:0;}
+
+ table.imagetable {
+ font-family: verdana,arial,sans-serif;
+ font-size:16px;
+ color:#004080;
+ border:1px solid #ff1a1a; 
+ border-collapse: collapse;
+}
+table.imagetable tr th {
+ padding: 8px;
+ border:1px solid #ff1a1a; 
+}
+table.imagetable tr td {
+ padding: 8px;
+ border:1px solid #ff1a1a; 
+}
+</style>
+
+<script>
+	function getRowObj(obj){
+			var i = 0;
+			while(obj.tagName.toLowerCase() != "tr"){
+				obj = obj.parentNode;
+				if(obj.tagName.toLowerCase() == "table")return null;
+			}
+		return obj;
+		}
+		//根据得到的行对象得到所在的行数
+	function getRowNo(obj){
+		var trObj = getRowObj(obj);
+		var trArr = trObj.parentNode.children;
+		for(var trNo= 0; trNo < trArr.length; trNo++){
+			if(trObj == trObj.parentNode.children[trNo]){
+				alert(trNo+1);
+			}
+		}
+		}
+		//删除行
+	function delRow(obj){
+		if(confirm("确定删除么?")){
+			var tr = this.getRowObj(obj);
+			if(tr != null){
+				tr.parentNode.removeChild(tr);
+			}else{
+				throw new Error("the given object is not contained by the table");
+			}
+		}
+}
+
+</script>
+
+</head>
+
+<body>  
+
+<video width="700" height="300" autoplay="autoplay" muted="muted" controls="controls" loop="">
+
+  <source src="http://192.168.31.187:5000/static/video/test.mp4" type="video/mp4">
+
+</video>
+
+
+<table class="imagetable" id="tab">
+</table> 
+    <script type="text/javascript">
+    $(function(){
+        $.ajax({
+    url:"http://192.168.31.187:5000/static/json/3.json",
+    type:"GET",
+    dataType: "json",
+    success:function(data){
+        var msg = "";
+        msg += "<tr>"+"<th>"+"Device Name"+"</th>"+"<th>"+"Platform Id"+"</th>"+"<th>"+"IP Address"+"</th>"+"<th>"+"Up Time"+"</th>"+"<th>"+"Action"+"</th>"+"</tr>";
+        for ( var i = 0; i < data.test.length; i++) {//循环json对象，拼接tr,td的html
+           msg += "<tr>";
+           msg += "<td>" + data.test[i].id + "</td>";
+           msg += "<td>" + data.test[i].dsn + "</td>";
+           msg += "<td>" + data.test[i].pn+ "</td>";
+           msg += "<td>" + data.test[i].email + "</td>";
+           msg += "<td>" + "<img id=\"imgstyle\" src=\"http://192.168.31.187:5000/static/images/del.PNG\" style=\"width:20px;heigth:20px\" onClick=\"delRow(this)\">" +"</td>";
+           msg += "</tr>";
+        }
+        $("#tab").html(msg);
+        //通过jquery方式获取table，并把tr,td的html输出到table中
+    },
+    error:function(){
+    alert("数据加载错误!");
+    }
+    });
+    });
+</script>
+</body>
+
+
+ 
+</html>

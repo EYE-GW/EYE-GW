@@ -1,0 +1,53 @@
+<resources>
+<!--    <string name="app_name">小喵云视讯</string>-->
+<!--    <string name="app_name">小喵云酒店</string>-->
+    <string name="app_name">小喵实验室</string>
+<!--    <string name="app_name">VEPG</string>-->
+<!--    <string name="app_name">小喵实况</string>-->
+<!--    <string name="app_name">学习强国</string>-->
+<!--    <string name="app_name">星级酒店</string>-->
+
+    <string name="ok">OK</string>
+    <string name="update_apk">检测到软件的最新版本，正在下载中，请稍候....</string>
+
+    <!--
+    <string name="indexPage">file:///android_asset/index.html</string>
+    <string name="loadingPage">file:///android_asset/loading.html</string>
+    <string name="blankPage">file:///android_asset/blank.html</string>
+    <string name="bridgePage">file:///android_asset/bridge.html</string>
+    <string name="rfbPage">file:///android_asset/rfb.html</string>
+    <string name="adPage">file:///android_asset/ad.html</string>
+    -->
+
+    <!-- App Portal -->
+    <!-- Default
+    <string name="indexPage">http://mcvapp.yueyangsmart.tv/yueyang/index.html</string>
+    -->
+    <!-- Lab -->
+    <string name="indexPage">http://192.168.31.187:5000</string>
+
+    <!--  VEPG -->
+<!--    <string name="indexPage">http://webapp.mapg.cn/tv_vepg/index.html</string>-->
+
+    <!-- Hotel -->
+<!--    <string name="indexPage">http://mcvapp.yueyangsmart.tv/hstv_m/index.html</string>-->
+
+    <!--  Camera Live  -->
+<!--    <string name="indexPage">http://webapp.mapg.cn/cameralive/</string>-->
+
+<!--    <string name="indexPage">http://172.16.1.207/xuexi/index.html</string>-->
+<!--    <string name="indexPage">http://172.16.1.207/hstv/index.html</string>-->
+
+
+    <string name="loadingPage">file:///android_asset/loading.html</string>
+    <string name="blankPage">file:///android_asset/blank.html</string>
+    <string name="bridgePage">http://mcvapp.yueyangsmart.tv/iptv/bridge.html</string>
+    <string name="rfbPage">http://mcvapp.yueyangsmart.tv/iptv/rfb.html</string>
+    <string name="adPage">http://mcvapp.yueyangsmart.tv/iptv/ad.html</string>
+
+    <string name="localPage">file:///android_asset/index.html</string>
+
+    <string name="versionCode">1</string>
+    <string name="urlVersionCheck">http://mcvapp.yueyangsmart.tv/update/versioninfo.json</string>
+
+</resources>

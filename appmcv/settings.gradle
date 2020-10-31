@@ -1,0 +1,3 @@
+include ':libmcv'
+include ':app'
+rootProject.name = "appmcv"

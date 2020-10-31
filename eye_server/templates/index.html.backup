@@ -1,0 +1,144 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="page-view-size" content="1282*722"/>
+<title>首页</title>
+<!--
+<link href="css/default.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+
+<script src="./js/main.js"></script>
+<script src="./static/js/index.js"></script>
+<script src="./static/js/jquery.unveil.js"></script>
+<script src="./static/js/flask.js"></script>
+
+-->
+
+<!--
+<script language="javascript">
+function getHead(obj,portraitUrl){
+    //模拟网络延迟请求
+     setTimeout(function (){   
+     obj.src="/static/images/404.png";               
+    },1000+Math.random()*5000);
+
+
+    $.ajax({
+        type: "get",
+        url: portraitUrl,
+        async: true,
+        success: function (portrait) {
+           obj.src=portrait;
+            portraitUrl.onload=null;//这里每次给obj的src赋值后都会执行onload 为了避免无限死循环需要这样置空
+        }
+
+}
+
+
+function get_image(){
+		path = "http://127.0.0.1:5000/static/images/404.png";
+        image = document.querySelectorAll(".right ul li:first-child img");
+		image.src = path;
+	}
+
+var webImg = document.querySelector('.right ul li:first-child img');
+webImg.onclick = function(){
+	var imgSrc = webImg.getAttribute('src');
+	if (imgSrc === '/static/images/1.png'){
+		webImg.setAttribute('src','http://127.0.0.1:5000/static/images/404.png');
+		}else {
+			webImg.setAttribute('src','/static/images/1.png');
+		
+		}
+
+
+}
+
+
+</script>
+-->
+<script src="./static/js/jquery.js"></script>
+<script src="./static/js/flask.js"></script>
+
+</head>
+<body id="body" bgcolor="#ffffff">
+
+<pre style="width:100%;height:100%" id="data-test"></pre>
+<pre id="getImg()"></pre> 
+$('#getImg').html(getImg(json)) 
+
+<div id="range" kj-type="main" mx-setting="{'bgType':'from_upload','data':'','imgPosition':'no','isSupportHtml5':'0'}" jzbd="{'back':['640','back_history',''],'exit':['114','index_site',''], 'menu':['8','index_site','']}">
+	<div id="safe" class="demo">
+
+		<div>点击按钮获取JSON数据</div> 
+			<input type="button" id="button" value="确定" /> 
+		<div id="result"></div> 
+
+		<div class="content">
+			<div class="time"></div>
+			<div class="left">
+				<ul></ul>
+			</div>
+			<div class="right">
+				<ul>
+				<!--
+					<li>
+						<a class="#" href="#"> 
+							<img src="?" onerror="getImg();" id="img1">
+						</a>
+					</li>
+					-->
+					<li>
+						<a href="home_theater.html">
+<!--							
+							<img src="?" onerror="getImg();" id="img1">
+-->
+							<img src="static/images/2.png">
+						</a>
+					</li>
+					<li>
+						<a href="http://172.16.1.223/PAGESERVER/pages/gjqnhyjd_zh/index.html">
+							<img src="static/images/3.png">
+							
+						</a>
+					</li>
+					<li>
+						<a href="http://172.16.1.223/PAGESERVER/pages/xiaomiao/world_cup.html">
+							<img src="static/images/4.png">
+
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="static/images/5.png">
+
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="static/images/6.png">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="static/images/7.png">
+		
+						</a>
+					</li>
+					<li>
+						<a href="http://172.16.1.223/PAGESERVER/pages/university2/index.html">
+							<img src="static/images/8.png">
+
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+</html>
